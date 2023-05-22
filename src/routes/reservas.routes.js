@@ -5,11 +5,8 @@ const router = express.Router()
 
 
 
-router.get('/',reservasController.getAllReservas)
-/*router.get('/:dni', alumnosController.getAlumnoByDni)
-router.delete('/:dni',alumnosController.deletealumnoByDni) 
-router.post('/', alumnosController.createAlumno)
-router.put('/:dni', alumnosController.updateAlumno )*/
+router.get('/', reservasController.getAllReservas)
+
 
 module.exports = { router}
 
