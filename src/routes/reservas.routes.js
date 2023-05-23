@@ -6,6 +6,8 @@ const router = express.Router()
 
 
 router.get('/', reservasController.getAllReservas)
+router.get('/:id', reservasController.getRersevasById)
+router.delete('/:id', reservasController.deleteReservaById)
 
 
 module.exports = { router}
