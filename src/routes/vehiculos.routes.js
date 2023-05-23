@@ -6,9 +6,11 @@ const router = express.Router()
 
 
 router.get('/', vehiculosController.getAllVehiculos)
-/*
-router.get('/:id',)
-router.delete('/:id', )
-router.post('/', )*/
+
+router.get('/: patente', vehiculosController.getVehiculoByPatente)
+
+router.put('/', vehiculosController.modificarDatosVehiculo)
+
+router.post('/', vehiculosController.createNewVehiculo)
 
 module.exports = { router}

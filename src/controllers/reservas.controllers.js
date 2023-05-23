@@ -36,7 +36,7 @@ const deleteReservaById =(req , res) =>{
 }
 
 const addNuevaReserva = (req, res)=>{
-    const nombre = req.body.nombre
+   
    
         const ids = reservas.map( id =>id.id)
         const maxId = reservas.length > 0 ? Math.max(...ids) + 1 : 1
