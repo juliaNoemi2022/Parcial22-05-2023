@@ -21,21 +21,20 @@ const modificarDatosVehiculo = (req , res) =>{
     const vehiculoModificado = req.body
     const indice = vehiculos.findIndex( v=> v.patente == patente)
     if(indice >= 0){
-      vehiculos[indice].capacidad = req.body.capacidad,
-      vehiculos[indice].habilitado =true,
+      vehiculos[indice].capacidad = req.body.capacidad
+      vehiculos[indice].habilitado =true
       vehiculos[indice].autonomiaKms= req.body.autonomiaKms
        res.status(201).json({ vehiculo: vehiculos[indice]})
     }
         res.status(404).json({
-            resultado: "La operacion no pudo ser realizada",
+            
             mensaje: `El vehículo  con patente ${patente} no fue encontrado`
-        
     })
 }
 
 
        
-}
+
       
 
 const createNewVehiculo =  (req, res)=>{

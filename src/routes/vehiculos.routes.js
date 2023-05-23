@@ -9,7 +9,7 @@ router.get('/', vehiculosController.getAllVehiculos)
 
 router.get('/: patente', vehiculosController.getVehiculoByPatente)
 
-router.put('/', vehiculosController.modificarDatosVehiculo)
+router.put('/: patente', vehiculosController.modificarDatosVehiculo)
 
 router.post('/', vehiculosController.createNewVehiculo)
 
