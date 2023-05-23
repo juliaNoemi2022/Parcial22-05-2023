@@ -35,10 +35,31 @@ const deleteReservaById =(req , res) =>{
     }
 }
 
+const addNuevaReserva = (req, res)=>{
+    const nombre = req.body.nombre
+   
+        const ids = reservas.map( id =>id.id)
+        const maxId = reservas.length > 0 ? Math.max(...ids) + 1 : 1
+        reservas.push( {
+                    id: maxId,
+                    cliente: req.body.cliente,
+                    cantPersonas: req.body.cantPersonas,
+                    distancia: req.body.distancia,
+                    fecha: req.body.fecha
+                                
+        })
+        res.status(201).json(reservas[reservas.length - 1])
+    
+   
+}
+
+
+    
+
 module.exports =
  {
     getAllReservas,
     getRersevasById,
-    deleteReservaById
-                   
+    deleteReservaById,
+    addNuevaReserva                  
 }

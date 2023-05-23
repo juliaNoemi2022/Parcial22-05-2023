@@ -8,7 +8,7 @@ const router = express.Router()
 router.get('/', reservasController.getAllReservas)
 router.get('/:id', reservasController.getRersevasById)
 router.delete('/:id', reservasController.deleteReservaById)
-
+router.post('/', reservasController.addNuevaReserva)
 
 module.exports = { router}
 
